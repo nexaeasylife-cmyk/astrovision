@@ -1,0 +1,80 @@
+export const languages = ['English', 'Greek', 'French', 'Dutch', 'Turkish', 'Hindi'];
+export const groups = [
+  { id: 'love', mark: 'together', title: 'Love & relationships', symbol: '♡', description: 'Make room for understanding, connection, and a new perspective.', topics: ['Love', 'Marriage'] },
+  { id: 'readings', mark: 'rings', title: 'Readings & self-discovery', symbol: '☾', description: 'Explore your patterns, possibilities, and the chapters ahead.', topics: ['Readings'] },
+  { id: 'spiritual', mark: 'protection', title: 'Spiritual protection & healing', symbol: '✧', description: 'Traditional practices for reflection, balance, and peace of mind.', topics: ['Spiritual Protection'] },
+  { id: 'career', mark: 'growth', title: 'Career, business & money', symbol: '☼', description: 'Find a thoughtful perspective on your ambitions and next steps.', topics: ['Career'] },
+  { id: 'wellbeing', mark: 'lotus', title: 'Wellbeing & balance', symbol: '❀', description: 'A supportive space for spiritual reflection alongside qualified professional care.', topics: ['Wellbeing'] },
+  { id: 'devotion', mark: 'devotion', title: 'Puja & devotion', symbol: '☀', description: 'Explore meaningful devotional traditions and optional personal practices.', topics: ['Puja'] },
+];
+const entries = [
+ ['love-relationship-guidance','love','Love & Relationship Guidance','Explore communication, compatibility, and the patterns within your relationships.'],
+ ['love-marriage-guidance','love','Love Marriage Guidance','A space to reflect on commitment, family expectations, and your shared future.'],
+ ['relationship-reconciliation','love','Relationship Reconciliation Guidance','Reflect on reconnection with respect for everyone’s choices and boundaries.'],
+ ['marriage-support','love','Marriage Guidance & Support','Thoughtful guidance for couples navigating change or a difficult chapter.'],
+ ['psychic-reading','readings','Psychic Reading','An intuitive, reflective conversation about the questions on your mind.'],
+ ['spiritual-reading','readings','Spiritual Reading','Explore your inner life, personal values, and spiritual direction.'],
+ ['palm-reading','readings','Palm Reading','Discover the traditional symbolism of your palm’s lines and shapes.'],
+ ['horoscope-matching','readings','Horoscope Matching & Future Guidance','Explore birth-chart compatibility and traditional perspectives on life’s cycles.'],
+ ['energy-cleansing','spiritual','Spiritual Protection & Energy Cleansing','Explore traditional practices that encourage calm and a sense of renewal.'],
+ ['spiritual-healing','wellbeing','Spiritual Healing','A gentle space for spiritual reflection and emotional grounding.'],
+ ['evil-spirit-concerns','spiritual','Evil Spirit Concerns & Spiritual Support','Talk through spiritual concerns in a calm, respectful setting.'],
+ ['black-magic-concerns','spiritual','Black Magic Concerns & Protection','Discuss your concerns and optional traditional practices without fear or pressure.'],
+ ['bad-luck-remedies','spiritual','Bad Luck & Obstacle Guidance','Reflect on difficult periods and explore meaningful traditional practices.'],
+ ['business-guidance','career','Business Guidance','Consider your business questions through a traditional astrological lens.'],
+ ['career-guidance','career','Career Guidance','Explore your strengths, changing priorities, and professional direction.'],
+ ['money-finance-guidance','career','Money & Finance Guidance','Reflect on financial habits and priorities alongside qualified financial advice.'],
+ ['family-disputes','love','Family Dispute Guidance','Reflect on family tensions, communication, and boundaries with a thoughtful outside perspective.'],
+ ['separation-divorce','love','Separation & Divorce Guidance','A space to reflect on relationship changes, your choices, and the next chapter. Not legal advice.'],
+ ['property-disputes','career','Property Dispute Guidance','Discuss property concerns through a traditional perspective alongside independent legal and financial advice.'],
+ ['face-reading','readings','Face Reading','Explore traditional facial symbolism as a starting point for self-reflection, not a judgment of character.'],
+ ['hanuman-puja','devotion','Hanuman Puja','Discuss the meaning and arrangements for a traditional Hanuman puja. Participation is always your choice.'],
+ ['jealousy-curse-concerns','spiritual','Jealousy & Curse Concerns','A calm conversation about jealousy and spiritual concerns, without claiming that a curse is present.'],
+ ['job-guidance','career','Job Guidance','Reflect on workplace challenges, a job search, and the decisions within your control.'],
+ ['future-predictions','readings','Future Perspectives','Explore traditional views of life cycles and possibilities without promises or certain predictions.'],
+ ['depression-spiritual-support','wellbeing','Depression — Spiritual Support','Optional spiritual reflection alongside professional mental health care. This service does not diagnose or treat depression.'],
+];
+// Names transcribed from the supplied specialist list; descriptive titles avoid promises of outcomes.
+const referenceNames: Record<string, string> = {
+ 'relationship-reconciliation': 'Get Your Love Back', 'family-disputes': 'Family Disputes',
+ 'separation-divorce': 'Separation / Divorce', 'bad-luck-remedies': 'Bad Luck Removal',
+ 'property-disputes': 'End Property Disputes', 'horoscope-matching': 'Horoscope Matching',
+ 'palm-reading': 'Palm Reading', 'marriage-support': 'Marriage Problems', 'face-reading': 'Face Reading',
+ 'hanuman-puja': 'Hanuman Puja', 'jealousy-curse-concerns': 'Jealousy and Curse',
+ 'job-guidance': 'Job Problems', 'money-finance-guidance': 'Money Problems',
+ 'future-predictions': 'Future Predictions', 'love-relationship-guidance': 'Relationship Problems',
+ 'evil-spirit-concerns': 'Evil Spirits Removal', 'black-magic-concerns': 'Black Magic Removal',
+ 'business-guidance': 'End Business Problems', 'psychic-reading': 'Psychic Reading',
+ 'spiritual-healing': 'Spiritual Healing', 'career-guidance': 'Career Problems',
+ 'depression-spiritual-support': 'Depression',
+};
+export const services = entries.map(([slug, category, title, description]) => ({ slug, category, title, description, referenceName: referenceNames[slug] }));
+export const process = [
+ ['Say hello', 'Choose a service or tell us what is on your mind. A simple conversation is enough to begin.'],
+ ['Share your concern', 'Tell us what you hope to explore. Your birth date, time, and place may help with a chart reading.'],
+ ['Your personal session', 'Connect by phone, video, or in person. Agree a time and format that work for you.'],
+ ['Reflect & follow up', 'Discuss your guidance, ask questions, and take time to reflect. Traditional remedies are always optional.'],
+];
+export const questions = [
+ ['Understanding astrology','How can astrology help me?','Astrology offers a traditional framework for reflecting on personality, timing, and life patterns. You can use it as one perspective when considering your next step.'],
+ ['Understanding astrology','Are outcomes guaranteed?','No. Astrology is belief-based guidance, not a guarantee of future events. Your decisions and circumstances shape your life.'],
+ ['Your consultation','Can I discuss love and relationship concerns?','Yes. Consultations can explore compatibility, communication, commitment, and relationship changes, while respecting the choices of everyone involved.'],
+ ['Your consultation','Can I discuss spiritual concerns?','Yes. Spiritual readings and traditional cleansing practices offer a space for reflection. No consultation establishes that you are cursed or under a supernatural influence.'],
+ ['Booking','How do I book a consultation?','Choose Book Appointment, add your preferences, and send your enquiry. Your appointment is confirmed only when AstroVision replies and agrees the details with you.'],
+ ['Your consultation','What details should I prepare?','For a birth-chart reading, have your birth date, time, and place ready if you know them. Share personal details directly during your consultation rather than in a public review.'],
+ ['Your consultation','What if I do not know my birth time?','Let us know. Some readings depend on an accurate time; we can explain the limitations and discuss other ways to approach your question.'],
+ ['Privacy & expectations','How is my enquiry handled?','The website prepares your message in your browser. When you choose to send it using WhatsApp or Instagram, that service handles your message under its own privacy policy.'],
+ ['Booking','Can I join from another country?','Online consultations can be arranged by phone or video. Include your time zone in your enquiry so a suitable time can be agreed.'],
+ ['Booking','Which languages are available?','English, Greek, French, Dutch, Turkish, and Hindi. Select your preferred language when you enquire.'],
+ ['Booking','How long is a session?','The length depends on the reading and what you would like to discuss. Ask when arranging your appointment so you know what to expect.'],
+ ['Privacy & expectations','Do I have to follow a remedy or continue a session?','No. Traditional practices are optional. You are free to ask questions, decline a suggestion, or stop the conversation.'],
+ ['Privacy & expectations','Does this replace professional advice?','No. Spiritual guidance does not replace medical, psychological, legal, or financial advice. Seek support from a qualified professional for those needs.'],
+ ['Booking','Can I change my appointment?','Contact AstroVision through the same conversation used to arrange your appointment. A new time is subject to availability.'],
+];
+export const articles = [
+ {slug:'preparing-for-your-first-reading', category:'YOUR FIRST READING', title:'A little preparation. A more meaningful reading.', intro:'You do not need to have everything figured out before your first consultation.', paragraphs:[['Begin with one question','Write down the question that matters most to you. A focused starting point can help you explain your circumstances and what you would like to explore.'],['Bring what you know','For a birth-chart reading, your date, time, and place of birth can be helpful. If any of these are uncertain, say so. A thoughtful conversation includes the limits of a reading.'],['Leave space for your own judgment','You can take notes, ask for an explanation, or decide a suggestion is not for you. A reading is a space for reflection, and your choices remain your own.']]},
+ {slug:'understanding-your-moon-sign', category:'ASTROLOGY NOTES', title:'Beyond your sun sign: a place for the moon.', intro:'Traditional astrology looks at more than the sign most of us know from our birthday.', paragraphs:[['A different part of the chart','In astrological tradition, the sun is often associated with identity, while the moon is associated with emotional patterns and the inner world. These are symbolic interpretations, not scientific measurements of personality.'],['Why birth details matter','The moon moves through the zodiac more quickly than the sun. A personal reading uses birth details and a specified astrological system; a birthday-only sign finder cannot determine a moon sign reliably.'],['A prompt for reflection','Rather than treating a label as a fixed identity, use it to ask what helps you feel secure, understood, and at ease. Your experience matters more than fitting a description.']]},
+ {slug:'making-space-for-calm', category:'EVERYDAY REFLECTION', title:'Small rituals for a quieter moment.', intro:'Sometimes a pause is the most useful place to begin.', paragraphs:[['Make a little room','Set aside a few minutes away from notifications. Choose a comfortable place and notice your surroundings. There is no special equipment or perfect routine required.'],['Give your thoughts a place','Write down what is taking your attention and one manageable action you can take today. A personal ritual can simply be a repeatable way to pause and reflect.'],['Keep support within reach','Spiritual practice can sit alongside everyday support. If distress persists or affects your daily life, speak with a qualified healthcare professional.']]},
+];
+export const zodiac = [ ['Aries','♈','Mar 21 – Apr 19'],['Taurus','♉','Apr 20 – May 20'],['Gemini','♊','May 21 – Jun 20'],['Cancer','♋','Jun 21 – Jul 22'],['Leo','♌','Jul 23 – Aug 22'],['Virgo','♍','Aug 23 – Sep 22'],['Libra','♎','Sep 23 – Oct 22'],['Scorpio','♏','Oct 23 – Nov 21'],['Sagittarius','♐','Nov 22 – Dec 21'],['Capricorn','♑','Dec 22 – Jan 19'],['Aquarius','♒','Jan 20 – Feb 18'],['Pisces','♓','Feb 19 – Mar 20'] ];
+export const reflections = ['Make space for one honest conversation. Listening may offer a perspective you have not considered.', 'Give your attention to a small, practical step. Progress does not need to be dramatic to be meaningful.', 'Notice what gives you energy, and what asks too much of it. A thoughtful boundary can be an act of care.', 'Pause before deciding. Write down your options and let your own priorities guide the next step.', 'Reconnect with something you enjoy. A familiar practice can create room for a fresh idea.', 'Let curiosity lead a conversation today. Ask a question before assuming you know the answer.'];

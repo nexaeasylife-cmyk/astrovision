@@ -1,0 +1,23 @@
+node_modules/
+.next/
+.env*
+!.env.example
+*.tsbuildinfo
+playwright-report/
+test-results/
+
+# Local references and workspace metadata
+photos/
+photo for referance/
+image.png
+.agents/
+.codex/
+.aws/
+
+# Design briefs and internal working notes
+/AGENTS.md
+/docs/
+/*.pdf
+/mainpromt.md
+/uirevision.md
+/public/models/README.md
