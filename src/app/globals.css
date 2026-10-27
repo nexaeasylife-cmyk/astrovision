@@ -67,3 +67,87 @@ body{isolation:isolate}
 .brand img{animation:brand-breathe 8s ease-in-out infinite}
 @keyframes brand-breathe{0%,100%{transform:translateY(0) scale(1)}50%{transform:translateY(-2px) scale(1.035)}}
 @media(prefers-reduced-motion:reduce){.brand img{animation:none!important}}
+
+/* Revision: clearer text surfaces, fresh photography, and language-aware layouts. */
+:root{--muted:#bac5d7;--line:#d5bb7950}
+.hero-inner{gap:7%;grid-template-columns:1.05fr 1fr}
+.hero-photo{position:relative;aspect-ratio:4/5;max-height:530px;overflow:hidden;border-radius:160px 160px 12px 12px;border:1px solid #e8d08a55;box-shadow:0 24px 80px #0005}
+.hero-photo>img,.about-photo>img,.journal-art>img{object-fit:cover}
+.hero-photo:after{content:'';position:absolute;inset:0;background:linear-gradient(transparent 42%,#07152eec)}
+.photo-caption{position:absolute;z-index:1;bottom:30px;left:32px;right:25px}
+.photo-caption>span{font-size:10px;letter-spacing:2px;color:#f5dfa6}
+.photo-caption>p{font-family:var(--font-heading),Georgia,serif;font-size:30px;line-height:1.2;color:#fff;margin:12px 0 0}
+.about-photo{position:relative;min-height:480px;align-self:stretch;overflow:hidden;border-radius:12px 100px 12px 12px}
+.about-photo:after{content:'';position:absolute;inset:40% 0 0;background:linear-gradient(transparent,#07152ee6)}
+.about-photo>span{position:absolute;z-index:1;left:28px;right:24px;bottom:25px;font-size:10px;letter-spacing:2px;color:#fff3ce}
+.about-story{display:grid;grid-template-columns:1fr 1.15fr;gap:9%;border-top:1px solid var(--line)}
+.about-story h3{margin-top:32px;color:var(--champagne)}
+.about-story h3:first-child{margin-top:0}
+.about-story p{font-size:15px;line-height:1.9}
+.about-story .research-note{font-size:12px;margin-top:30px}
+.research-note a{text-decoration:underline;text-underline-offset:4px}
+.journal-art{position:relative;overflow:hidden;border-radius:8px}
+.journal-art:after{content:'';position:absolute;inset:40% 0 0;background:linear-gradient(transparent,#07152ed9)}
+.journal-art>small{z-index:1;color:#fff3ce!important}
+.page-hero{background:linear-gradient(90deg,#0b1b3af5 0%,#0b1b3ac9 55%,#0b1b3a22 100%)}
+.page-hero .container{position:relative;z-index:1}
+.page-hero h1{max-width:850px;text-wrap:balance}
+.page-hero p{max-width:670px}
+.category-card,.finder-result,.booking-form,.booking-aside,.horoscope-panel,.review-card,.service-card{background:#102340}
+.footer{background:#08162cf5}
+.about-story,.article-body{background:linear-gradient(90deg,#0b1b3aee,#0b1b3ad9)}
+.hero-copy>p:not(.eyebrow),.section-heading>p,.category-card p,.service-card-copy p,.footer-main p,.footer-main a,.faq-list details>p,.source-note,.form-note,.breadcrumbs,.results-count{color:#c3ccdc}
+input::placeholder,textarea::placeholder{color:#aebbd0;opacity:1}
+input,select,textarea{color-scheme:dark}
+option{background:#102340;color:#f3f1ea}
+.button{color:#11213a}
+.button.outline{color:#f0d99c;background:#0b1b3ae6}
+.button.whatsapp{color:#092315}
+.filter-row button{color:#c9d2e2;background:#102340;border-color:#64718b}
+.filter-row button.selected{background:#e8d08a;color:#102340;border-color:#e8d08a}
+.language-control{position:relative;flex-shrink:0}
+.language-select{display:flex;align-items:center;gap:6px;color:#f0d99c;padding:6px 8px;border:1px solid #e8d08a66;border-radius:4px;background:#102340}
+.language-select select{border:0;background:transparent;color:#f3f1ea;font-size:11px;max-width:108px;min-height:30px;padding:0 3px;cursor:pointer}
+.language-error{position:absolute;top:100%;right:0;width:220px;padding:12px;background:#102340;border:1px solid #e8d08a;color:#fff;z-index:60;font-size:12px}
+.header-actions{gap:10px}
+.shared-cosmos[data-theme]:not([data-theme=home])>.living-scene,.shared-cosmos[data-theme]:not([data-theme=home])>.cosmos-poster{right:-20%;width:85vw;opacity:.65}
+.shared-cosmos[data-theme]:not([data-theme=home]) .jyotisha-poster{transform:scale(1)}
+html:not([lang=en]) .site-header nav{gap:13px;font-size:10px;white-space:normal}
+html:not([lang=en]) .header-actions>.compact{white-space:normal;max-width:155px;text-align:center;line-height:1.4}
+html:not([lang=en]) .hero h1{font-size:clamp(44px,5vw,76px);line-height:1.15;letter-spacing:-1px}
+html[lang=hi] h1,html[lang=hi] h2,html[lang=hi] h3{line-height:1.5;letter-spacing:normal}
+@media(max-width:1200px){.site-header{gap:16px}.site-header nav{gap:12px}.header-actions>.call-link{display:none}.brand small{letter-spacing:1px}.language-select select{max-width:92px}}
+@media(min-width:761px) and (max-width:1100px){.site-header{flex-wrap:wrap}.site-header nav{order:3;width:100%;justify-content:center;margin:0;font-size:12px}.header-actions{margin-left:auto}}
+@media(max-width:760px){.hero-inner{grid-template-columns:1fr;gap:35px}.hero-photo{width:min(100%,380px);height:360px;aspect-ratio:auto;margin:auto;border-radius:130px 130px 10px 10px}.about-photo{min-height:380px;width:100%}.about-section{gap:35px}.about-story{grid-template-columns:1fr;gap:20px}.about-story p{font-size:14px}.language-select{gap:3px;padding:3px 5px}.language-select>svg{width:13px}.language-select select{font-size:11px;max-width:80px;min-height:30px}.header-actions>.compact{display:none}.site-header .header-actions{margin-left:auto}.site-header{gap:10px}.page-hero h1{max-width:100%;overflow-wrap:break-word}.shared-cosmos[data-theme]:not([data-theme=home])>.living-scene,.shared-cosmos[data-theme]:not([data-theme=home])>.cosmos-poster{width:145vw;right:-65%;opacity:.35}.page-hero{background:linear-gradient(90deg,#0b1b3af5,#0b1b3aa6)}.hero h1{font-size:56px}.photo-caption>p{font-size:28px}html:not([lang=en]) .site-header nav{font-size:13px}.mobile-contact>a:last-child{flex:1;justify-content:center;line-height:1.5}.motion-toggle{max-width:calc(100vw - 20px)} }
+@media(max-width:380px){.site-header .brand{font-size:21px}.site-header .brand img{width:30px;height:30px}.site-header .brand small{font-size:4px}.language-select select{max-width:72px}.site-header{padding-inline:4%;gap:7px}.hero-photo{height:310px}}
+.button.whatsapp{background:#164c3b;color:#d8ffe8}
+.button.whatsapp:hover{background:#1b624a;color:#fff}
+.art-index{color:#d8c28c}
+@media(max-width:760px){.hero{background:linear-gradient(#0b1b3ad9,#0b1b3a55)}}
+html[lang=hi] body,html[lang=hi] h1,html[lang=hi] h2,html[lang=hi] h3,html[lang=hi] blockquote{font-family:var(--font-hindi),sans-serif}
+.language-select select,.language-select option[lang=hi]{font-family:var(--font-body),var(--font-hindi),sans-serif}
+html[lang=hi] .eyebrow{letter-spacing:.5px;line-height:1.8}
+.section-heading>.text-link{white-space:normal}
+.category-grid>*{min-width:0}
+.category-card h3,.specialist-grid strong{overflow-wrap:anywhere}
+
+/* Service photographs tell the individual story; astrological diagrams stay in the hero. */
+.service-image{position:relative;width:100%;height:100%;overflow:hidden;background:#142540}
+.service-image img{object-fit:cover;transition:transform .65s ease}
+.service-card:hover .service-image img,.category-card:hover .service-image img{transform:scale(1.035)}
+.service-visual{height:230px;background:#142540}
+.service-detail-image{height:350px;margin-bottom:40px;overflow:hidden;border-radius:8px;border:1px solid var(--line)}
+.category-card{padding:0 0 25px;overflow:hidden}
+.category-card>.card-number{display:block;margin:20px 24px 0}
+.category-card>.category-art{width:100%;max-width:none;height:195px;aspect-ratio:auto;margin:18px 0 24px}
+.category-card>h3,.category-card>p,.category-card>.card-bottom{margin-inline:24px}
+.shared-cosmos[data-theme]:not([data-theme=home])>.living-scene,.shared-cosmos[data-theme]:not([data-theme=home])>.cosmos-poster{top:0;right:0;width:min(68vw,1050px);height:100%;opacity:1}
+.shared-cosmos[data-theme]:not([data-theme=home]) .jyotisha-poster{object-fit:contain;transform:scale(1)}
+.shared-cosmos[data-theme]:not([data-theme=home]) .cosmos-shade{background:linear-gradient(90deg,#0b1b3af5 0%,#0b1b3ad9 35%,#0b1b3a44 70%,transparent)}
+.page-hero{background:linear-gradient(90deg,#0b1b3ae8,#0b1b3a99 45%,transparent 85%);min-height:410px;display:flex;align-items:center}
+.page-hero h1{max-width:760px}
+@media(min-width:761px){.page-hero .container{padding-right:34%}.page-hero h1{font-size:clamp(44px,4.5vw,66px)}.page-hero p:not(.eyebrow){max-width:640px}}
+@media(max-width:1000px){.category-card>.category-art{height:180px}}
+@media(max-width:760px){.service-visual{height:230px}.service-detail-image{height:245px;margin-bottom:28px}.category-card>.category-art{height:150px}.category-card>.card-number{margin-inline:17px}.category-card>h3,.category-card>p,.category-card>.card-bottom{margin-inline:17px}.page-hero{min-height:340px;background:linear-gradient(90deg,#0b1b3af5,#0b1b3ab0)}.page-hero h1{font-size:44px}.shared-cosmos[data-theme]:not([data-theme=home])>.living-scene,.shared-cosmos[data-theme]:not([data-theme=home])>.cosmos-poster{width:120vw;right:-35%;opacity:.55}.shared-cosmos[data-theme]:not([data-theme=home]) .cosmos-shade{background:linear-gradient(90deg,#0b1b3ae6,#0b1b3a55)} }
+@media(prefers-reduced-motion:reduce){.service-image img{transition:none}.service-card:hover .service-image img,.category-card:hover .service-image img{transform:none}}
+@media(min-width:761px){.page-hero h1{max-width:650px}.page-hero p:not(.eyebrow){max-width:560px}}

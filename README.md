@@ -1,6 +1,6 @@
 # AstroVision
 
-Next.js website with a navy and gold design, responsive navigation, a shared, front-facing Three.js Jyotisha background, animated service icons and static reduced-motion fallbacks.
+Next.js website with a navy and gold design, responsive navigation, section-specific Three.js backgrounds, animated service icons and static reduced-motion fallbacks.
 
 ## Run locally
 
@@ -12,11 +12,11 @@ Browser regression: with the site running, use `npx playwright test tests/naviga
 
 ## Pages and content
 
-Home, About, Services, 25 service detail pages, How It Works, Reviews, FAQ, Contact, Book Appointment, Horoscope, Journal with three articles, Privacy and Terms are implemented. No pricing is displayed.
+Home, About, Services, 24 service detail pages, How It Works, Reviews, FAQ, Contact, Book Appointment, Horoscope, Journal with three articles, Privacy and Terms are implemented. No pricing is displayed.
 
-Consultation languages are English, Greek, French, Dutch, Turkish and Hindi. These are consultation preferences; website copy is English. The horoscope contains labelled reflection prompts and an approximate Western sun-sign finder, not calculated personal predictions.
+The header language selector translates page content into Greek, French, Dutch, Turkish and Hindi, with English as the default. Local dictionaries are fetched only when selected; the choice is saved on the device and remains across navigation. These are website languages, not a promise of consultation-language availability. Original client review quotations and user-entered text remain in their original language. Enquiry messages currently use English labels. The horoscope contains labelled reflection prompts and an approximate Western sun-sign finder, not calculated personal predictions.
 
-All 22 services from the supplied specialist image are represented, with three existing offerings retained. Descriptive service titles avoid promises; the specialist index also shows the supplied names. Edit `src/data/content.ts` for services, languages, FAQs and articles, and `src/data/site.ts` for business identity, map, Instagram and supplied review excerpts. Reviews are not a live Google feed. Real biography, credentials and video testimonials still require client material.
+Hanuman Puja has been removed as requested, leaving 24 services across five categories. Descriptive service titles avoid promises; the specialist index also shows the supplied names. Edit `src/data/content.ts` for services, FAQs and articles, and `src/data/site.ts` for business identity, map, Instagram and supplied review excerpts. Reviews are not a live Google feed. Real biography, credentials and video testimonials still require client material.
 
 ## Contact configuration
 
@@ -26,6 +26,12 @@ Forms prepare an editable enquiry locally. Visitors explicitly open WhatsApp to 
 
 ## Animation and assets
 
-`src/components/celestial.tsx` and `living-scene.tsx` supply one decorative Jyotisha scene with Navagraha markers, twelve rashi divisions and twenty-seven nakshatra divisions mounted in the root layout. The same scene stays behind every page. Its matching static Jyotisha poster is hidden once the live canvas is ready; the separate rotating hero zodiac wheel has been removed. A persistent pause control stops the background, service icons and logo animation. `service-art.tsx` supplies the six animated category icons. Reduced motion, hidden tabs, data saving, low-memory hints and unavailable WebGL retain static artwork; off-screen service icons pause. Original procedural artwork and the supplied business logo are used.
+`src/components/celestial.tsx` retains the home Jyotisha scene and selects distinct astrology diagrams for About, Services, How It Works, Reviews, Contact, Book, Horoscope, Journal, FAQ, Privacy and Terms. Service/article detail pages inherit their section artwork. `src/lib/page-art.ts` defines original kundli, zodiac/aspect, lunar-phase, horizon and other astrological diagrams; see `ASTROLOGY_VISUAL_RESEARCH.md` for sources and page meanings. The home background is preserved. Non-home artwork is contained inside its page header. Each of the 24 services uses its own editorial photograph, mapped in `src/data/service-imagery.json`, on the catalogue and detail pages. `npx tsx scripts/create-page-art.ts` captures matching `*-astrology.webp` fallback posters from the actual WebGL scene (requires a local running server and Playwright Chromium). Reduced motion, hidden tabs, data saving, low-memory hints and unavailable WebGL retain static artwork. A pause control stops animation. New photographs are stored locally; see [asset credits and research](ASSET_CREDITS.md).
+
+## Translations and verification
+
+`public/locales/` contains static dictionaries. `scripts/extract-translations.cjs` extracts source text. Translation drafts were generated offline using Argos models with CTranslate2 and sentencepiece in a separate tooling environment; those tools and models are not application dependencies. `scripts/translate-offline.py` documents regeneration. Reviewed navigation, booking, zodiac and heading translations live in `src/data/translations/ui.tsv`; apply them with `node scripts/apply-translation-overrides.cjs`. Long-form translations are machine-assisted drafts and should receive native-language editorial review before publication.
+
+Run `npm test`, `npm run build`, and then `npm run typecheck`. With a server running, run `npx playwright test tests/navigation.spec.ts tests/enquiry.spec.ts tests/revision.spec.ts --browser=firefox`. Set `PLAYWRIGHT_BASE_URL` to use another port. The revision suite checks all main routes at desktop/mobile widths, axe accessibility/contrast, removed-service URLs, image loading, all language switches, persistence, input preservation and failed-language-download recovery. On Windows-mounted WSL workspaces, `WATCHPACK_POLLING=true npm run dev -- --webpack` reliably detects file changes.
 
 The repository contains the application source and runtime assets. Original reference photos, design briefs, internal working notes and local environment files are excluded. Hosting has not been configured.

@@ -18,10 +18,10 @@ test('changed details invalidate the prepared message while direct message edits
   await preview.fill('My edited enquiry');
   await expect(preview).toHaveValue('My edited enquiry');
 
-  await page.getByLabel('Preferred language').selectOption('Greek');
+  await page.getByLabel('Consultation mode').selectOption('Phone call');
   await expect(preview).toHaveCount(0);
   await page.getByRole('button', { name: 'Prepare my enquiry' }).click();
-  await expect(preview).toHaveValue(/Preferred language: Greek/);
+  await expect(preview).toHaveValue(/Session: Phone call/);
 
   await page.getByLabel('Your question').fill('I would like some guidance.');
   await expect(preview).toHaveCount(0);

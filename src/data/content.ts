@@ -1,11 +1,9 @@
-export const languages = ['English', 'Greek', 'French', 'Dutch', 'Turkish', 'Hindi'];
 export const groups = [
   { id: 'love', mark: 'together', title: 'Love & relationships', symbol: '♡', description: 'Make room for understanding, connection, and a new perspective.', topics: ['Love', 'Marriage'] },
   { id: 'readings', mark: 'rings', title: 'Readings & self-discovery', symbol: '☾', description: 'Explore your patterns, possibilities, and the chapters ahead.', topics: ['Readings'] },
   { id: 'spiritual', mark: 'protection', title: 'Spiritual protection & healing', symbol: '✧', description: 'Traditional practices for reflection, balance, and peace of mind.', topics: ['Spiritual Protection'] },
   { id: 'career', mark: 'growth', title: 'Career, business & money', symbol: '☼', description: 'Find a thoughtful perspective on your ambitions and next steps.', topics: ['Career'] },
   { id: 'wellbeing', mark: 'lotus', title: 'Wellbeing & balance', symbol: '❀', description: 'A supportive space for spiritual reflection alongside qualified professional care.', topics: ['Wellbeing'] },
-  { id: 'devotion', mark: 'devotion', title: 'Puja & devotion', symbol: '☀', description: 'Explore meaningful devotional traditions and optional personal practices.', topics: ['Puja'] },
 ];
 const entries = [
  ['love-relationship-guidance','love','Love & Relationship Guidance','Explore communication, compatibility, and the patterns within your relationships.'],
@@ -28,7 +26,6 @@ const entries = [
  ['separation-divorce','love','Separation & Divorce Guidance','A space to reflect on relationship changes, your choices, and the next chapter. Not legal advice.'],
  ['property-disputes','career','Property Dispute Guidance','Discuss property concerns through a traditional perspective alongside independent legal and financial advice.'],
  ['face-reading','readings','Face Reading','Explore traditional facial symbolism as a starting point for self-reflection, not a judgment of character.'],
- ['hanuman-puja','devotion','Hanuman Puja','Discuss the meaning and arrangements for a traditional Hanuman puja. Participation is always your choice.'],
  ['jealousy-curse-concerns','spiritual','Jealousy & Curse Concerns','A calm conversation about jealousy and spiritual concerns, without claiming that a curse is present.'],
  ['job-guidance','career','Job Guidance','Reflect on workplace challenges, a job search, and the decisions within your control.'],
  ['future-predictions','readings','Future Perspectives','Explore traditional views of life cycles and possibilities without promises or certain predictions.'],
@@ -40,7 +37,7 @@ const referenceNames: Record<string, string> = {
  'separation-divorce': 'Separation / Divorce', 'bad-luck-remedies': 'Bad Luck Removal',
  'property-disputes': 'End Property Disputes', 'horoscope-matching': 'Horoscope Matching',
  'palm-reading': 'Palm Reading', 'marriage-support': 'Marriage Problems', 'face-reading': 'Face Reading',
- 'hanuman-puja': 'Hanuman Puja', 'jealousy-curse-concerns': 'Jealousy and Curse',
+ 'jealousy-curse-concerns': 'Jealousy and Curse',
  'job-guidance': 'Job Problems', 'money-finance-guidance': 'Money Problems',
  'future-predictions': 'Future Predictions', 'love-relationship-guidance': 'Relationship Problems',
  'evil-spirit-concerns': 'Evil Spirits Removal', 'black-magic-concerns': 'Black Magic Removal',
@@ -65,7 +62,7 @@ export const questions = [
  ['Your consultation','What if I do not know my birth time?','Let us know. Some readings depend on an accurate time; we can explain the limitations and discuss other ways to approach your question.'],
  ['Privacy & expectations','How is my enquiry handled?','The website prepares your message in your browser. When you choose to send it using WhatsApp or Instagram, that service handles your message under its own privacy policy.'],
  ['Booking','Can I join from another country?','Online consultations can be arranged by phone or video. Include your time zone in your enquiry so a suitable time can be agreed.'],
- ['Booking','Which languages are available?','English, Greek, French, Dutch, Turkish, and Hindi. Select your preferred language when you enquire.'],
+ ['Website','Can I read the website in my language?','Use the website language selector for English, Greek, French, Dutch, Turkish, or Hindi. This changes the page text. Please confirm consultation language availability directly with AstroVision.'],
  ['Booking','How long is a session?','The length depends on the reading and what you would like to discuss. Ask when arranging your appointment so you know what to expect.'],
  ['Privacy & expectations','Do I have to follow a remedy or continue a session?','No. Traditional practices are optional. You are free to ask questions, decline a suggestion, or stop the conversation.'],
  ['Privacy & expectations','Does this replace professional advice?','No. Spiritual guidance does not replace medical, psychological, legal, or financial advice. Seek support from a qualified professional for those needs.'],

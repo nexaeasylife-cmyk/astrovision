@@ -28,7 +28,6 @@ const hindiTopics: Record<string, string> = {
   'Jealousy and Curse': 'ईर्ष्या और श्राप संबंधी चिंताओं',
   'Evil Spirits Removal': 'नकारात्मक शक्तियों से जुड़ी आध्यात्मिक चिंताओं',
   'Black Magic Removal': 'काले जादू से जुड़ी आध्यात्मिक चिंताओं',
-  'Hanuman Puja': 'हनुमान पूजा',
   'Traditional Ritual Guidance': 'पारंपरिक अनुष्ठान मार्गदर्शन',
  Marriage: 'विवाह', Relationships: 'रिश्तों', Family: 'परिवार', 'Money and Business': 'धन और व्यवसाय', Career: 'करियर', Property: 'संपत्ति', 'Health and Wellbeing': 'स्वास्थ्य और कल्याण', 'Protection and Cleansing': 'पारंपरिक सुरक्षा और शुद्धिकरण', 'Palm or Face Reading': 'हस्तरेखा या मुखाकृति अध्ययन', 'Kundli Matching': 'कुंडली मिलान', Other: 'अपने प्रश्न', 'a consultation': 'परामर्श', 'a question about consultations': 'परामर्श से जुड़े प्रश्न' };
 export function buildMessage(topic: string, name = '', language = 'English') {

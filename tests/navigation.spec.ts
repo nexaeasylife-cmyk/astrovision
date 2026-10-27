@@ -4,10 +4,10 @@ test.use({ baseURL: process.env.PLAYWRIGHT_BASE_URL || 'http://localhost:3000', 
 
 test('a search entered on arrival is retained while URL category synchronization mounts', async ({ page }) => {
   await page.goto('/services');
-  await page.getByRole('searchbox').fill('Hanuman');
-  await expect(page.getByRole('searchbox')).toHaveValue('Hanuman');
+  await page.getByRole('searchbox').fill('Palm');
+  await expect(page.getByRole('searchbox')).toHaveValue('Palm');
   await expect(page.locator('.service-card')).toHaveCount(1);
-  await expect(page.locator('.service-card h3')).toHaveText('Hanuman Puja');
+  await expect(page.locator('.service-card h3')).toHaveText('Palm Reading');
 });
 
 test('footer category navigation updates the existing service list and clears its search', async ({ page }) => {

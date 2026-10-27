@@ -3,7 +3,7 @@ export const site = {
   maps: 'https://maps.app.goo.gl/rj2mQdtfo7izqfCD8',
   instagram: 'https://www.instagram.com/a_s_t_r_o_vision/',
   astrologer: '', whatsapp: process.env.NEXT_PUBLIC_WHATSAPP_NUMBER ?? '', phone: process.env.NEXT_PUBLIC_PHONE_NUMBER ?? '', email: process.env.NEXT_PUBLIC_CONTACT_EMAIL ?? '', hours: process.env.NEXT_PUBLIC_OPENING_HOURS ?? '', facebook: process.env.NEXT_PUBLIC_FACEBOOK_URL ?? '', location: 'Ledras 154-154, Nicosia 1011, Cyprus',
-  languages: ['English', 'Greek', 'French', 'Dutch', 'Turkish', 'Hindi'], stats: [],
+  stats: [],
   disclaimer: 'Astrology and spiritual guidance are offered for reflection and support. They are not a substitute for medical, legal, financial or psychological advice.',
 };
 export const categories = [
@@ -12,7 +12,6 @@ export const categories = [
   { title: 'Wellbeing & balance', topic: 'Health and Wellbeing', number: '03', mark: 'lotus', description: 'A supportive space for spiritual reflection and emotional wellbeing, alongside professional care.', services: ['Spiritual Healing', 'Depression — Spiritual Support', 'Wellbeing Guidance', 'Spiritual Practice'] },
   { title: 'Readings & perspective', topic: 'Palm or Face Reading', number: '04', mark: 'rings', description: 'Explore traditional readings for self-reflection and a fresh perspective on your next chapter.', services: ['Palm Reading', 'Face Reading', 'Psychic Reading', 'Future Predictions', 'Birth Chart', 'Annual Reading'] },
   { title: 'Protection & cleansing', topic: 'Protection and Cleansing', number: '05', mark: 'protection', description: 'Traditional spiritual consultations and cleansing practices for concerns about negative influences.', services: ['Bad Luck Removal', 'Jealousy and Curse', 'Evil Spirits Removal', 'Black Magic Removal'] },
-  { title: 'Puja & devotion', topic: 'Hanuman Puja', number: '06', mark: 'devotion', description: 'Explore devotional practices and discuss a personal Hanuman puja consultation.', services: ['Hanuman Puja', 'Traditional Ritual Guidance'] },
 ];
 export const topics = [...new Set([
   'Marriage', 'Relationships', 'Family', 'Money and Business', 'Career', 'Property',
